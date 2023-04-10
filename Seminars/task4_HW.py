@@ -10,15 +10,17 @@
 # 24 -> 4 16 4
 # 60 -> 10 40 10
 
-# totalZhuravliki = int(input('Введите общее количество журавликов '))
 
-zhuravli = 6
-petya = zhuravli // 3 // 2 #кол-во журавликов, которое сделал Петя
-serega = zhuravli // 3 // 2 #кол-во журавликов, которое сделал Сережа
-katya = petya * 4 #кол-во журавликов, которое сделала Катя
-print(katya)
-print(petya)
-print(serega)
+zhuravli = int(input('Введите общее количество журавликов '))
+if zhuravli % 6 == 0:
+    petya = zhuravli // 3 // 2 #кол-во журавликов, которое сделал Петя
+    serega = zhuravli // 3 // 2 #кол-во журавликов, которое сделал Сережа
+    katya = petya * 4 #кол-во журавликов, которое сделала Катя
+    print(katya)
+    print(petya)
+    print(serega)
+else:
+    print('error')
 
 
 
