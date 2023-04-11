@@ -10,21 +10,65 @@
 # 385916 -> yes
 # 123456 -> no
 
-b = int(input('Введите номер билета '))
-sumFirst3 = 0
-sumLast3 = 0
-if  b > 99999 and b < 1000000:
-    while(b > 999):
-        c = b % 10
-        b = b // 10
-        sumLast3 = sumLast3 + c
-    print(sumLast3)
-    while(b > 0):
-        c = b % 10
-        b = b // 10
-        sumFirst3 = sumFirst3 + c
-    print(sumFirst3)
-else:
-    print('error')
+# b = int(input('Введите шестизначное число '))
+# sumFirst3 = 0
+# sumLast3 = 0
 
+# b = int(b)
+# if b > 99999 and b < 1000000:
+#     while(b > 999):
+#         c = b % 10
+#         b = b // 10
+#         sumLast3 = sumLast3 + c
+#     print('Сумма последних трех цифр: ', sumLast3)
+#     while(b > 0):
+#         c = b % 10
+#         b = b // 10
+#         sumFirst3 = sumFirst3 + c
+#     print('Сумма первых трех цифр: ', sumFirst3)
+#     if sumLast3 == sumFirst3:
+#         print('yes')
+#     else:
+#         print('no')
+# else:
+#     print('error')
+
+
+
+# _________________________________
+
+
+# b = input('Введите шестизначное число ')
+# sumFirst3 = 0
+# sumLast3 = 0
+
+
+# print(len(b))
+# if len(b) == 6:
+#     # b = int(b)
+#     c = int(b[0]) + int(b[1]) + int(b[2])
+#     d = int(b[3]) + int(b[4]) + int(b[5])
+#     if c == d:
+#         print('yes')
+#     else:
+#         print('no')
+# else:
+#     print('error')
+
+# _________________________________
+
+t = int(input('Введите шестизначное число '))
+if t < 100000 or t > 999999:
+    print('error')
+else:
+    a = t // 100000
+    b = t // 10000 % 10
+    c = t // 1000 % 10
+    d = t // 100 % 10
+    e = t // 10 % 10
+    f = t % 10
+if a + b + c == d + e + f:
+    print('yes')
+else:
+    print('no')
 
