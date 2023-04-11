@@ -16,11 +16,20 @@ import random
 
 n_days = int(input(('Введите кол-во дней ')))
 count = 0
-temp = random.randint(-50, 50)
+prev = None
+temps = []
 
 for i in range(n_days): #закончится ndays
     temp = random.randint(-50, 50)
-    print(temp, end = ' ')
+    temps.append(temp)
+print(temps)
+maxLong = 0
+currLong = 0
+for temp in temps:
     if temp > 0:
-        count += 1
-print('\n', count)
+        currLong = currLong +1
+    else:
+        if currLong > maxLong:
+            maxLong = currLong
+        currLong = 0
+print(maxLong)
