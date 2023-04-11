@@ -14,12 +14,12 @@ import random
 n_fruits = int(input(('Введите кол-во арбузов ')))
 weight = []
 
-for i in range(n_fruits): #закончится n_fruits
+for i in range(n_fruits): #закончится n_fruits #задаем цикл для генерирования последовательности в массиве
     temp = random.randint(1, 15)
     weight.append(temp)
 print(weight)
-min_weight = weight[0]
-max_weight = weight[0]
+# min_weight = weight[0]
+# max_weight = weight[0]
 
 # for i in weight:
 #     if i < min_weight:
@@ -28,3 +28,4 @@ max_weight = weight[0]
 #         max_weight = i
 # print(min_weight, max_weight)
 print(min(weight), max(weight))
+print(sum(weight))
