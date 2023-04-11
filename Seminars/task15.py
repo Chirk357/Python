@@ -21,9 +21,10 @@ print(weight)
 min_weight = weight[0]
 max_weight = weight[0]
 
-for i in weight:
-    if i < min_weight:
-        min_weight = i
-    if i > max_weight:
-        max_weight = i
-print(min_weight, max_weight)
+# for i in weight:
+#     if i < min_weight:
+#         min_weight = i
+#     if i > max_weight:
+#         max_weight = i
+# print(min_weight, max_weight)
+print(min(weight), max(weight))
