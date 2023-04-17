@@ -43,32 +43,32 @@
 # sumLast3 = 0
 
 
-# print(len(b))
-# if len(b) == 6:
-#     # b = int(b)
-#     c = int(b[0]) + int(b[1]) + int(b[2])
-#     d = int(b[3]) + int(b[4]) + int(b[5])
-#     if c == d:
-#         print('yes')
-#     else:
-#         print('no')
-# else:
-#     print('error')
+print(len(b))
+if len(b) == 6:
+    # b = int(b)
+    c = int(b[0]) + int(b[1]) + int(b[2])
+    d = int(b[3]) + int(b[4]) + int(b[5])
+    if c == d:
+        print('yes')
+    else:
+        print('no')
+else:
+    print('error')
 
 # _________________________________
 
-t = int(input('Введите шестизначное число '))
-if t < 100000 or t > 999999:
-    print('error')
-else:
-    a = t // 100000
-    b = t // 10000 % 10
-    c = t // 1000 % 10
-    d = t // 100 % 10
-    e = t // 10 % 10
-    f = t % 10
-if a + b + c == d + e + f:
-    print('yes')
-else:
-    print('no')
+# t = int(input('Введите шестизначное число '))
+# if t < 100000 or t > 999999:
+#     print('error')
+# else:
+#     a = t // 100000
+#     b = t // 10000 % 10
+#     c = t // 1000 % 10
+#     d = t // 100 % 10
+#     e = t // 10 % 10
+#     f = t % 10
+# if a + b + c == d + e + f:
+#     print('yes')
+# else:
+#     print('no')
 
