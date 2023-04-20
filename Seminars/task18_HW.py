@@ -10,3 +10,13 @@
 # 1 2 3 4 5
 # 6
 # -> 5
+
+import random
+
+number = int(input(('Введите натуральное число N ')))
+array = []
+
+for i in range(number): 
+    temp = random.randint(1, number)
+    array.append(temp)
+print(array)

@@ -15,7 +15,7 @@ import random
 number = int(input(('Введите натуральное число N ')))
 array = []
 
-for i in range(number): #закончится n_fruits #задаем цикл для генерирования последовательности в массиве
+for i in range(number): 
     temp = random.randint(1, number)
     array.append(temp)
 print(array)
