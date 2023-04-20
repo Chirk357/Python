@@ -20,3 +20,50 @@ for i in range(number):
     temp = random.randint(1, number)
     array.append(temp)
 print(array)
+
+x = int(input(('Введите число X ')))
+diff = 0
+
+array_diff = []
+for i in array:
+    diff = i - x
+    diff_all_positive = abs(diff)
+    # print()
+    # print(diff_all_positive)
+    array_diff.append(diff_all_positive)
+print(array_diff)
+
+
+new_min = min(array_diff)
+print(new_min)
+
+
+answer_number = x - new_min
+print(answer_number)
+
+# __________________________________________________________________
+
+# import random
+
+# number = int(input(('Введите натуральное число N ')))
+# array = []
+
+# for i in range(number): 
+#     temp = random.randint(1, number)
+#     array.append(temp)
+# print(array)
+
+# x = int(input(('Введите число X ')))
+# diff = 0
+
+# if x in array:
+#     print(x) 
+
+# count = 0
+# for i in array:
+#     if i == x + 1:
+#         print(i)
+#         count += 1
+#     if i == x - 1:
+#         print(i)
+#         count += 1

@@ -24,40 +24,35 @@
 # Вывод:
 # 12
 
-# English_dict = {1: 'AEIOULNSTR',
-#                 2: 'DG',
-#                 3: 'BCMP',
-#                 4: 'FHVWY',
-#                 5: 'K',
-#                 8: 'JX',
-#                 10: 'QZ'}
 
-English_dict = {'[AEIOULNSTR]': '1', '[DG]': '2', '[BCMP]': '3', '[FHVWY]': '4', '[K]': '5', '[JX]': '8', '[QZ]': '10'}
+letter_score_dict = {'AEIOULNSTR': 1, 
+                'DG': 2, 
+                'BCMP': 3,
+                'FHVWY': 4, 
+                'K': 5, 
+                'JX': 8, 
+                'QZ': 10,
+                'АВЕИНОРСТ': 1,
+                'ДКЛМПУ': 2,
+                'БГЁЬЯ': 3,
+                'ЙЫ': 4,
+                'ЖЗХЦЧ': 5,
+                'ШЭЮ': 8,
+                'ФЩЪ': 10}
+def word_score(letter_score_dict, word):
+    total_score = 0
+    for letter in word:
+        for v_key, v_value in letter_score_dict.items():
+            if letter.upper() in v_key:
+                total_score += v_value
+    return total_score
 
-
-Russian_dict = {1: 'АВЕИНОРСТ',
-                2: 'ДКЛМПУ',
-                3: 'БГЁЬЯ',
-                4: 'ЙЫ',
-                5: 'ЖЗХЦЧ',
-                8: 'ШЭЮ',
-                10: 'ФЩЪ'}
+word = input('Введите слово: ')
+print(f'{word_score(letter_score_dict, word)}')
 
 # for item in English_dict:
 #     print('{}: {}'. format(item, English_dict[item]))
 
 # for item in Russian_dict:
 #     print('{}: {}'. format(item, Russian_dict[item]))
-
-word = input('Введите слово: ').upper()
-print(word)
-
-y = []
-
-
-for i in English_dict:
-    print(i)
-    for j in i:
-        print(j)
-       
 
