@@ -11,35 +11,55 @@
 # 6
 # -> 5
 
-import random
+import random   
 
-number = int(input(('Введите натуральное число N ')))
-array = []
+c = int(input("Введите длину массива: "))
 
-for i in range(number): 
-    temp = random.randint(1, number)
-    array.append(temp)
-print(array)
+d = [] 
 
-x = int(input(('Введите число X ')))
-diff = 0
+# e = int(input("Введите число: "))
 
-array_diff = []
-for i in array:
-    diff = i - x
-    diff_all_positive = abs(diff)
-    # print()
-    # print(diff_all_positive)
-    array_diff.append(diff_all_positive)
-print(array_diff)
+for i in range(c): 
+
+    temp2 = random.randint(0, 9)
+
+    d.append(temp2)
+
+print(d)
+
+e = int(input("Введите число: "))
+
+g1=abs(d[0]-e) 
+
+temp3 = d[0]
+
+dif18 = 0
+
+for i in range(len(d)):
+
+    if d[i]==e:
+
+        temp3 = d[i] 
+
+        break           
+
+    if d[i]<e:
+
+        dif18=e-d[i]
+
+    if d[i]>e:
+
+        dif18=d[i]-e
+
+    if dif18<g1:
+
+        g1=dif18
+
+        temp3 = d[i]
+
+print(temp3)
 
 
-new_min = min(array_diff)
-print(new_min)
-
-
-answer_number = x - new_min
-print(answer_number)
 
 # __________________________________________________________________
 
