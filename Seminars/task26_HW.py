@@ -8,12 +8,15 @@
 # A = 3; B = 5 -> 243 (3⁵)
 #     A = 2; B = 3 -> 8 
 
+a = int(input('Введите число '))
+b = int(input('Введите введите степень числа '))
 
-def stepen:
-    temp = input('Введите число: ')
-    if n == 1:
-        return temp
-    return nums_mirror(n - 1) + temp
+def stepen(a, b):
+    if a == 0 or b == 0:
+        return 1
+    if b == 1:
+        return a
+    return a * stepen(a, b-1)
 
 
-print(nums_mirror(2))
+print(stepen(a, b))
