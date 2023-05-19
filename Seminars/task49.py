@@ -24,7 +24,7 @@ def find_farthest_orbit(orbits):
     res = None
 
     for i in range(len(orb_filter)):
-        dif_sq = orb_filter[i][0] * orb_filter[i][1] * math.pi
+        dif_sq = orb_filter[i][0] * orb_filter[i][1] * math.pi #import math --> math.pi - это число Пи ипортированное из библиотеки
         #orb_filter[i][0] * orb_filter[i][1] - это 1, 3 при i = 0; при i = 1, 2.5 и 10 - это элементы под индексом [0] и [1]
         if max_sq < dif_sq:
             max_sq = dif_sq
@@ -34,3 +34,55 @@ def find_farthest_orbit(orbits):
 
 orbits = [(1, 3), (2.5, 10), (7, 2), (6, 6), (4, 3)]
 print(find_farthest_orbit(orbits))
+
+# _________________________________________________________
+
+# def find_farthest_orbit(orbits):
+#     for orbit in orbits:
+#         if orbit[0] * orbit[1] * pi == max(map(lambda orb_tupl: orb_tupl[0] * orb_tupl[1] * pi,
+#                                                filter(lambda x: x[0] != x[1], orbits))):
+#             return orbit
+
+
+
+#_____________________________________________________________
+from math import pi
+
+def find_farthest_orbit(orbits):
+    res_list = [i for i in orbits if i[0] * i[1] * pi == max(
+        map(lambda orb_tupl: orb_tupl[0] * orb_tupl[1] * pi,
+            filter(lambda x: x[0] != x[1], orbits))
+    )]
+    # print(type(res_list))
+    return res_list[0]
+    # [(2.5, 10)] - res_list
+    # (2.5, 10) - res_list[0]
+    # for orbit in orbits:
+    #     if orbit[0] * orbit[1] * pi == max(map(lambda orb_tupl: orb_tupl[0] * orb_tupl[1] * pi,
+    #                                            filter(lambda x: x[0] != x[1], orbits))):
+    #         return orbit
+    # orb_filter = list(filter(lambda x: x[0] != x[1], orbits))
+    # maxx = orb_filter[0][0] * orb_filter[0][1] * pi
+    # max_t = orb_filter[0]
+    # for i in orb_filter:
+    #     if i[0] * i[1] * pi > maxx:
+    #         maxx = i[0] * i[1] * pi
+    #         max_t = i
+    # return max_t
+
+
+# orbits = [(1, 3), (2.5, 10), (7, 2), (6, 6), (4, 3)]
+# final_res = find_farthest_orbit(orbits)
+# print(final_res)
+# print(type(final_res))
+# print(*final_res)
+# for i in orbits:
+#     if i[0] != i[1]:
+#         print(i)
+# res_list = [i for i in orbits if i[0] != i[1]]
+# print(res_list)
+
+# res_list = [i for i in orbits if i[0] * i[1] * math.pi == max(map(lambda orb_tupl:
+#                                                     orb_tupl[0] * orb_tupl[1] * math.pi,
+#                                                   filter(lambda x: x[0] != x[1], orbits)))                             ]
+#     return res_list
