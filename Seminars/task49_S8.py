@@ -51,19 +51,28 @@ def print_all(f):
 def search_contact(f):
     last_name = input('Введите фамилию для поиска: ')
     adr_book = read_all(f)
-    print(len(adr_book))
-    for i in range(len(adr_book)):
-        print(i, adr_book[i])
-    idx = int(input('Введи индекс для замены: '))
-    last_name, name, _ = adr_book[idx].split('; ')
-    phone = input('новый номер: ')
-    new_record = f'{last_name}; {name}; {phone}'
-    adr_book[idx] = new_record
-    with open(f, 'w', encoding='utf-8') as fd:
-        fd.writelines(adr_book)
-    # for line in adr_book:
-    #     if last_name in line:
-    #         print(line)
+    # print(len(adr_book))
+    # for i in range(len(adr_book)):
+    #     print(i, adr_book[i])
+    # idx = int(input('Введи индекс для замены: '))
+    # last_name, name, _ = adr_book[idx].split('; ')
+    # phone = input('новый номер: ')
+    # new_record = f'{last_name}; {name}; {phone}'
+    # adr_book[idx] = new_record
+    # with open(f, 'w', encoding='utf-8') as fd:
+    #     fd.writelines(adr_book)
+    find_list = []
+    for line in adr_book:
+        if last_name in line:
+            find_list.append(line)
+    if find_list is None:
+        print('не найден')
+        
+    else:
+        for find_line in find_list:
+            print(find_line)
+        
+
 
 
 def main():
