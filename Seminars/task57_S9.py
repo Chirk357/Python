@@ -36,6 +36,6 @@ df = pd.read_csv('california_housing_train.csv') # получили данные
 #print(df.loc[(df.median_income == 3.125), ['median_income', 'median_house_value']].max()) #Показать максимальное median_house_value, где median_income = 3.1250
 
 # Узнать какая максимальная population в зоне минимального значения median_house_value:
-df1 = df.loc[df.median_house_value < df.median_house_value.quantile( .15)]
+df1 = df.loc[df.median_house_value < df.median_house_value.quantile( .15)] # взяли нижние 15% от median house value
 print(df1.population.max())
 print(df1)
