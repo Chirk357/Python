@@ -16,6 +16,8 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
 
+
+
 df = pd.read_csv('penguins.csv')
 #print(df.head())
 #print(df.columns)
@@ -42,7 +44,7 @@ df = pd.read_csv('penguins.csv')
 # plt.show()
 
 
-#Изобразить Heatmap/ температурная карта
+# Изобразить Heatmap/ температурная карта
 # sns.heatmap(data=df.corr())
 # sns.heatmap(data=df.corr(numeric_only=True), annot= True)
 # plt.show()
@@ -72,15 +74,15 @@ df = pd.read_csv('penguins.csv')
 
 #69
 # Изобразить гистограмму по flipper_length_mm с оттенком height_group. Сделать анализ
-df.loc[df['flipper_length_mm'] <= 190, 'height_group'] = 'low'
-df.loc[(df['flipper_length_mm'] > 190) & (df['flipper_length_mm'] <= 210), 'height_group'] = 'middle'
-df.loc[df['flipper_length_mm'] > 210, 'height_group'] = 'high'
+# df.loc[df['flipper_length_mm'] <= 190, 'height_group'] = 'low'
+# df.loc[(df['flipper_length_mm'] > 190) & (df['flipper_length_mm'] <= 210), 'height_group'] = 'middle'
+# df.loc[df['flipper_length_mm'] > 210, 'height_group'] = 'high'
 
-print(df[['flipper_length_mm', 'height_group']])
-print(df.groupby('height_group')['flipper_length_mm'].mean())
+# print(df[['flipper_length_mm', 'height_group']])
+# print(df.groupby('height_group')['flipper_length_mm'].mean())
 
-sns.histplot(data=df, x='flipper_length_mm', hue= 'height_group')
-plt.show()
+# sns.histplot(data=df, x='flipper_length_mm', hue= 'height_group')
+# plt.show()
 
 
 
